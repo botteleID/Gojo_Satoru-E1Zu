@@ -131,11 +131,10 @@ Join my [News Channel](https://t.me/gojo_bots_network) to get information on all
 async def start_back(_, q: CallbackQuery):
     try:
         cpt = f"""
-Hey [{q.from_user.first_name}](http://t.me/{q.from_user.username})! My name is Gojo ✨.
-I'm here to help you manage your groups!
+Hey [{q.from_user.first_name}](http://t.me/{q.from_user.username})! My name is Gendhis. I am a bot to help you manage your group.
 Hit /help to find out more about how to use me in my full potential!
 
-Join my [News Channel](http://t.me/gojo_bots_network) to get information on all the latest updates."""
+Join my [News Channel](https://t.me/DutabotID) to get information on all the latest updates."""
 
         await q.edit_message_caption(
             caption=cpt,
@@ -153,8 +152,8 @@ async def commands_menu(_, q: CallbackQuery):
     keyboard = ikb(ou, True)
     try:
         cpt = f"""
-Hey **[{q.from_user.first_name}](http://t.me/{q.from_user.username})**! My name is Gojo✨.
-I'm here to help you manage your groups!
+Hey **[{q.from_user.first_name}](http://t.me/{q.from_user.username})**, My name is Gendhis. I am a bot to help you manage your group. You can select an option below, by clicking a button.
+
 Commands available:
 × /start: Start the bot
 × /help: Give's you this message."""
@@ -222,8 +221,8 @@ async def help_menu(_, m: Message):
             ou = await gen_cmds_kb(m)
             keyboard = ikb(ou, True)
             msg = f"""
-Hey **[{m.from_user.first_name}](http://t.me/{m.from_user.username})**!My name is Gojo✨.
-I'm here to help you manage your groups!
+Hey **[{m.from_user.first_name}](http://t.me/{m.from_user.username})**, My name is Gendhis. I am a bot to help you manage your group. You can select an option below, by clicking a button.
+
 Commands available:
 × /start: Start the bot
 × /help: Give's you this message."""
