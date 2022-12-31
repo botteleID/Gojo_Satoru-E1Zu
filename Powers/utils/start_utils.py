@@ -42,38 +42,17 @@ async def gen_start_kb(q: Message or CallbackQuery):
                     "➕ Add me to a chat!",
                     f"https://t.me/{Config.BOT_USERNAME}?startgroup=new",
                     "url",
-                ),
-                (
-                    "Support 👥",
-                    f"https://t.me/{SUPPORT_GROUP}",
-                    "url",
-                ),
+                )
+                
             ],
-            [("📚 Commands & Help", "commands")],
-            [
+            [("Commands & Help", "commands"),
                 (
-                    "🗃️ Source Code",
-                    "https://github.com/Gojo-Bots/Gojo_Satoru",
+                    "Owner️",
+                    f"https://t.me/Mazekubot",
                     "url",
-                ),
-                (
-                    "Owner ❤️",
-                    f"https://t.me/iamgojoof6eyes",
-                    "url",
-                ),
-            ],
-            [
-                (
-                    "Join for GFx work",
-                    "https://t.me/psy_Logos",
-                    "url",
-                ),
-                (
-                    "Powered by",
-                    "https://gojo_bots_network.t.me",
-                    "url",
-                ),
-            ],
+                ),],
+            
+            
         ],
     )
 
@@ -252,8 +231,8 @@ async def get_help_msg(m: Message or CallbackQuery, help_option: str):
         )
     else:
         help_msg = """
-Hey There! My name is Gojo.
-I'm here to help you manage your groups!
+Hey There, My name is Gendhis. I am a bot to help you manage your group. You can select an option below, by clicking a button.
+
 Commands available:
 × /start: Start the bot
 × /help: Give's you this message.
