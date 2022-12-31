@@ -514,7 +514,7 @@ TOSS = (
 )
 
 
-DECIDE = (""Ya." , "Tidak." , "Mungkin." , "Siapa yang peduli?" , "Tidak ada yang peduli tentang itu")
+DECIDE = ("Yes.", "No.", "Maybe.", "Siapa yang peduli?", "Tidak ada yang peduli tentang itu")
 
 INSULT_STRINGS = [
     "`Owww ... Dasar idiot bodoh.`" ,
