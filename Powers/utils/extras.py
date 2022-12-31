@@ -93,7 +93,7 @@ SLAP_TEMPLATES = (
     "( ・_・)ノΞ●~* {pengguna2} \n Dieeeeee!!." ,
     "( ・∀・)ｒ鹵~<≪巛;ﾟДﾟ)ﾉ\n *Bug menyemprot {user2}*." ,
     "( ﾟДﾟ)ﾉ占~<巛巛巛. \n -{pengguna2} Kamu menyebalkan!" ,
-    "( う-´)づ︻╦̵̵̿╤── \\ (˚☐˚")/ {pengguna2}." ,
+    "( う-´)づ︻╦̵̵̿╤── \\(˚☐˚”)/ {user2}.",
     "{user1} {memukul} {user2} dengan {item}." ,
     "{user1} {hits} {user2} di muka dengan {item}." ,
     "{user1} {hits} {user2} sedikit dengan {item}." ,
