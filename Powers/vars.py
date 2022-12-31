@@ -14,27 +14,27 @@ class Config:
     BOT_TOKEN = config("BOT_TOKEN", default=None)
     API_ID = int(config("API_ID", default="123"))
     API_HASH = config("API_HASH", default=None)
-    OWNER_ID = int(config("OWNER_ID", default=1344569458))
+    OWNER_ID = int(config("OWNER_ID", default=5166575484))
     MESSAGE_DUMP = int(config("MESSAGE_DUMP", default=-100))
     DEV_USERS = [
         int(i)
         for i in config(
             "DEV_USERS",
-            default="1874070588 1432756163 1344569458 1789859817 5276098631",
+            default="5166575484 1432756163 1344569458 1789859817 5276098631",
         ).split(" ")
     ]
     SUDO_USERS = [
         int(i)
         for i in config(
             "SUDO_USERS",
-            default="1344569458",
+            default="5166575484",
         ).split(" ")
     ]
     WHITELIST_USERS = [
         int(i)
         for i in config(
             "WHITELIST_USERS",
-            default="1344569458",
+            default="5166575484",
         ).split(" ")
     ]
     DB_URI = config("DB_URI", default="")
@@ -58,7 +58,7 @@ class Development:
     BOT_TOKEN = "YOUR BOT_TOKEN"
     API_ID = 12345  # Your APP_ID from Telegram
     API_HASH = "YOUR API HASH"  # Your APP_HASH from Telegram
-    OWNER_ID = 1344569458  # Your telegram user id defult to mine
+    OWNER_ID = 5166575484  # Your telegram user id defult to mine
     MESSAGE_DUMP = -100  # Your Private Group ID for logs
     DEV_USERS = []
     SUDO_USERS = []
