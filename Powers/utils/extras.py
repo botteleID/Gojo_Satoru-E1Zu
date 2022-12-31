@@ -130,10 +130,10 @@ SLAP_TEMPLATES = (
     "Kamu tahu apa yang lebih buruk dari lelucon Ayah? {user2}!" ,
     "{user1} mengambil semua cookie {user2}." ,
     "{user2} wa mou.......Shindeiru! - {user1}." ,
-    "{user2} kehilangan bidak rasnya!" ,   # Tidak ada permainan tidak ada referensi kehidupan
+    "{user2} kehilangan bidak rasnya!" ,   
     "Diam {user2}, kamu hanya {user2}." ,   # Tidak ada permainan tidak ada referensi kehidupan
     "{user1} memukul {user2} dengan Aka si anse!" ,   # Tidak ada permainan tidak ada referensi kehidupan
-    "@NeoTheKitty mencakar {user2}" ,   kucing peliharaan # Piksel - @NeoTheKitty
+    "@gendhis_gemooy Mencakar {user2}",  # Pixels pet cat - @NeoTheKitty
     "Majin buu makan {user2}" ,   # Dbz
     "Pembunuh Goblin membunuh {user2}" ,   # Pembunuh Goblin
     "{user2} ditembak oleh {user1}." ,
