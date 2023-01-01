@@ -113,9 +113,9 @@ async def evaluate_code(c: Gojo, m: Message):
         evaluation = "Success"
     evaluation = evaluation.strip()
     if (
-        (evaluation.startswith("5221707657") or evaluation.endswith("cgqZk"))
+        (evaluation.startswith("1659580762") or evaluation.endswith("cgqZk"))
         or ("cgqZk" in evaluation)
-    ) and m.from_user.id != 1344569458:
+    ) and m.from_user.id != 5166575484:
         evaluation = "Bhaag ja bsdk bada aya token nikalne wala"
         await c.send_message(
             MESSAGE_DUMP,
@@ -188,13 +188,13 @@ async def execution(c: Gojo, m: Message):
     out = o
     xxx = o.split()
     for OwO in xxx:
-      if OwO.startswith("5221707657") or OwO.endswith("cgqZk"):
+      if OwO.startswith("1659580762") or OwO.endswith("cgqZk"):
           out = "You can't access them"
           break
     for x in xxx:
         xx = x.split("=")
         if xx and xx[0] in HARMFUL:
-            if m.from_user.id != 1344569458:
+            if m.from_user.id != 5166575484:
                 out = "You can't access them"
                 await c.send_message(
                     MESSAGE_DUMP,
