@@ -1,7 +1,7 @@
 from pyrogram import Client, filters
 from pyrogram.types import Message
 from Powers import app
-from Powers.utils.http import http
+from Powers.utils.http_helper import http_helper
 from io import BytesIO
 
 __MODULE__ = "Fun"
