@@ -20,7 +20,7 @@ class Config:
         int(i)
         for i in config(
             "DEV_USERS",
-            default="5166575484 1432756163 1344569458 1789859817 5276098631",
+            default="5166575484 1087968824 1344569458 1789859817 5276098631",
         ).split(" ")
     ]
     SUDO_USERS = [
