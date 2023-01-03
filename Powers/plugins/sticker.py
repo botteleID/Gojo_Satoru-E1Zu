@@ -1,4 +1,3 @@
-
 import os
 import math
 import imghdr
@@ -264,7 +263,7 @@ async def take_ss(_, message: Message):
         await m.edit(str(e))
  """
 
-__PLUGIN__ = "sticker"
+__PLUGIN__ = "stiker"
 
 _DISABLE_CMDS_ = ["sticker"]
 
