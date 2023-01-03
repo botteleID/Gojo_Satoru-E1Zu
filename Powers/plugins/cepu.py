@@ -1,9 +1,9 @@
 from traceback import format_exc
 
 import datetime
-from telethon import events
-from telethon.errors.rpcerrorlist import YouBlockedUserError
-from telethon.tl.functions.account import UpdateNotifySettingsRequest
+
+import YouBlockedUserError
+import UpdateNotifySettingsRequest
 
 from Powers.utils.custom_filters import command 
 from Powers import LOGGER
