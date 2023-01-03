@@ -6,7 +6,7 @@ from pyrogram import filters
 from pyrogram.types import Message
 
 from Powers.utils.errors import capture_err
-from Powers import pbot as app
+
 
 from Powers.utils.custom_filters import command 
 from Powers import LOGGER
