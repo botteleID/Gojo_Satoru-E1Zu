@@ -44,6 +44,12 @@ async def fun_run(_, m: Message):
     LOGGER.info(f"{m.from_user.id} runed in {m.chat.id}")
     return
 
+@Gojo.on_message(command("bucin"))
+async def fun_buc(_, m: Message):
+    await m.reply_text(choice(extras.BUCIN_STRINGS))
+    LOGGER.info(f"{m.from_user.id} bucin in {m.chat.id}")
+    return
+
 
 @Gojo.on_message(command("slap"))
 async def fun_slap(c: Gojo, m: Message):
@@ -215,6 +221,7 @@ _DISABLE_CMDS_ = [
     "roll",
     "slap",
     "runs",
+    "bucin",
     "shout",
     "insult",
     "shrug",
