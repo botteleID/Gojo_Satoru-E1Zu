@@ -2,6 +2,8 @@ from traceback import format_exc
 
 from Powers.helper.http import *
 
+import httpx 
+
 from pyrogram import Client, filters
 from pyrogram.types import Message
 
@@ -181,7 +183,7 @@ async def pyrogram_to_quotly(messages):
         else:
             the_message_dict_to_append["replyMessage"] = {}
         payload["messages"].append(the_message_dict_to_append)
-    r = await http.post("https://bot.lyo.su/quote/generate.png", json=payload)
+    r = await httpx.post("https://bot.lyo.su/quote/generate.png", json=payload)
     if not r.is_error:
         return r.read()
     else:
