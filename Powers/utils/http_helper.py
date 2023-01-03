@@ -2,7 +2,7 @@ from asyncio import gather
 
 import httpx
 
-from aiohttp import ClientSession
+
 
 from Powers.bot_class import aiohttpsession as session
 
