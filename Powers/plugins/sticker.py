@@ -229,7 +229,7 @@ async def kang(client, message: Message):
         await message.reply_text("The sticker png dimensions are invalid.")
 
 
-""" @Gojo.on_message(command("webss"))
+ @Gojo.on_message(command("webss"))
 
 async def take_ss(_, message: Message):
     if len(message.command) < 2:
@@ -262,7 +262,6 @@ async def take_ss(_, message: Message):
         await m.delete()
     except Exception as e:
         await m.edit(str(e))
- """
 
 __PLUGIN__ = "stiker"
 
