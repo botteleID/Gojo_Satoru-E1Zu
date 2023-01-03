@@ -45,7 +45,7 @@ class Config:
     SUPPORT_CHANNEL = config("SUPPORT_CHANNEL", default="gojo_bots_network")
     VERSION = config("VERSION", default="v2.0")
     WORKERS = int(config("WORKERS", default=16))
-    BOT_USERNAME = ""
+    BOT_USERNAME = "@Gendhis4bot"
     BOT_ID = ""
     BOT_NAME = ""
 
