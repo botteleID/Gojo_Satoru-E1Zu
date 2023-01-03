@@ -3,7 +3,6 @@ import math
 import imghdr
 from asyncio import gather
 
-from telegram import InlineKeyboardMarkup, InlineKeyboardButton
 from traceback import format_exc
 from typing import List
 from pyrogram import filters
