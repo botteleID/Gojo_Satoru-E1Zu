@@ -2,7 +2,7 @@ import os
 import math
 import imghdr
 from asyncio import gather
-from PIL import Image
+
 from traceback import format_exc
 from typing import List
 from pyrogram import filters
@@ -11,6 +11,8 @@ from Powers import app,BOT_USERNAME
 from Powers.utils.custom_filters import command 
 from Powers import LOGGER
 from Powers.bot_class import Gojo
+
+from PIL import Image
 
 from pyrogram.errors import (
                         PeerIdInvalid,
