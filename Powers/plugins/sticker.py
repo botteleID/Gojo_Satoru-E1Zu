@@ -25,7 +25,7 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 from pyrogram import Client, errors, raw
 from pyrogram.file_id import FileId
 
-from button import Sticker
+
 
 MAX_STICKERS = 120
 SUPPORTED_TYPES = ["jpeg", "png", "webp"]
