@@ -184,7 +184,7 @@ async def kang(client, message: Message):
         e = format_exc()
         return print(e)
     packnum = 0
-    packname = "f" + str(message.from_user.id) + "_by_" + BOT_USERNAME
+    packname = "f" + str(message.from_user.id) + "_by_Gendhis"
     limit = 0
     try:
         while True:
@@ -201,8 +201,7 @@ async def kang(client, message: Message):
                         + str(packnum)
                         + "_"
                         + str(message.from_user.id)
-                        + "_by_"
-                        + BOT_USERNAME
+                        + "_by_Gendhis"
                 )
                 limit += 1
                 continue
@@ -220,7 +219,7 @@ async def kang(client, message: Message):
         )
     except (PeerIdInvalid, UserIsBlocked):
         keyboard = InlineKeyboardMarkup(
-            [[InlineKeyboardButton(text="Start", url=f"t.me/{BOT_USERNAME}")]]
+            [[InlineKeyboardButton(text="Start", url=f"t.me/@Gendhis4bot}")]]
         )
         await msg.edit("You Need To Start A Private Chat With Me.",reply_markup=keyboard)
     except StickerPngNopng:
