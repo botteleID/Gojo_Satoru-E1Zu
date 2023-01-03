@@ -11,7 +11,7 @@ from Powers.utils.custom_filters import command
 from Powers import LOGGER
 from Powers.bot_class import Gojo
 
-from PIL import Image
+
 
 from pyrogram.errors import (
                         PeerIdInvalid,
