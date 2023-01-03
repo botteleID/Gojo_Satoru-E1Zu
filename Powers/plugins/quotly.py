@@ -6,7 +6,7 @@ import http
 
 from pyrogram import Client, filters
 from pyrogram.types import Message
-
+from Powers import app
 from io import BytesIO
 
 
