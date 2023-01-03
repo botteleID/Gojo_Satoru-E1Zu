@@ -1,6 +1,6 @@
 from traceback import format_exc
 
-from Powers.utils.http_helper import http_helper
+from Powers.helper.http import http
 from pyrogram import Client, filters
 from pyrogram.types import Message
 
