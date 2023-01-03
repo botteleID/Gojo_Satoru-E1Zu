@@ -1,6 +1,6 @@
 from traceback import format_exc
 
-from Powers.utils.http_helper import *
+from Powers.helper.http import *
 
 import http
 
@@ -246,7 +246,7 @@ __PLUGIN__ = "quotly"
 _DISABLE_CMDS_ = ["kangcpu"]
 
 
-__alt_name__ = ["q", "memify"]
+__alt_name__ = ["q"]
 
 
 __HELP__ = f"""
