@@ -7,7 +7,7 @@ from functools import wraps
 
 from pyrogram.errors.exceptions.forbidden_403 import ChatWriteForbidden
 
-from Powers import MESSAGE_DUMP, pbot as app
+from Powers import MESSAGE_DUMP
 
 
 def split_limits(text):
