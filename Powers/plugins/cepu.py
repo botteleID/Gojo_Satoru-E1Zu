@@ -2,8 +2,7 @@ from traceback import format_exc
 
 import datetime
 
-import YouBlockedUserError
-import UpdateNotifySettingsRequest
+
 
 from Powers.utils.custom_filters import command 
 from Powers import LOGGER
