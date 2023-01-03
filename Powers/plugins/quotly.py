@@ -1,6 +1,5 @@
 from traceback import format_exc
 
-import httpx
 
 from pyrogram import Client, filters
 from pyrogram.types import Message
@@ -13,7 +12,7 @@ from Powers import LOGGER
 from Powers.bot_class import Gojo 
 
 
-
+from Powers.utils.http_helper import http_helper
 
 class QuotlyException(Exception):
     pass
