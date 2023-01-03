@@ -219,7 +219,7 @@ async def kang(client, message: Message):
         )
     except (PeerIdInvalid, UserIsBlocked):
         keyboard = InlineKeyboardMarkup(
-            [[InlineKeyboardButton(text="Start", url=f"t.me/@Gendhis4bot}")]]
+            [[InlineKeyboardButton(text="Start", url=f"t.me/Gendhis4bot}")]]
         )
         await msg.edit("You Need To Start A Private Chat With Me.",reply_markup=keyboard)
     except StickerPngNopng:
