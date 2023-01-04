@@ -9,15 +9,15 @@ import pymongo
 
 
 
-nexaub_antif = db.nexa_mongodb
+nexaub_antif = database.nexa_mongodb
 
-kukib = db.kuki
-lunab = db.luna
-nightmod =db.nightmode2
-taggeddb = db.tagallert
+kukib = database.kuki
+lunab = database.luna
+nightmod =database.nightmode2
+taggeddb = database.tagallert
 
-botlock = db.botlock
-afkusers = db.afkusers
+botlock = database.botlock
+afkusers = database.afkusers
 
 myapp = pymongo.MongoClient(MONGO_URL)
 dbx = myapp["AsyncIOMotorCursor"]
