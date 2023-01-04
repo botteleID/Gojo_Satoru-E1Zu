@@ -9,11 +9,6 @@ from Powers.utils.custom_filters import command
 from Powers import LOGGER
 from Powers.bot_class import Gojo 
 
-
-
-from Powers.utils.filter_groups import afkcheacker
-
-
 from Powers.database.afkdb import is_afk, add_afk, remove_afk, get_afk_users
 
 def get_readable_time(seconds: int) -> str:
