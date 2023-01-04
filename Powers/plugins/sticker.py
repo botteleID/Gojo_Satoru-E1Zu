@@ -184,7 +184,7 @@ async def kang(client, message: Message):
         e = format_exc()
         return print(e)
     packnum = 0
-    packname = "f" + str(message.from_user.id) + "_by_" + BOT_USERNAME
+    packname = "f" + str(message.from_user.id) + "_by_" + "Gendhis"
     limit = 0
     try:
         while True:
@@ -202,7 +202,7 @@ async def kang(client, message: Message):
                         + "_"
                         + str(message.from_user.id)
                         + "_by_"
-	                + BOT_USERNAME
+	                + "Gendhis"
                 )
                 limit += 1
                 continue
