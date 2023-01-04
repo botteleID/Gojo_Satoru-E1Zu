@@ -10,7 +10,7 @@ from pyrogram import filters
 from Powers.utils.custom_filters import command 
 from Powers import LOGGER
 from Powers.bot_class import Gojo
-
+from Powers.vars import Config
 
 
 from pyrogram.errors import (
