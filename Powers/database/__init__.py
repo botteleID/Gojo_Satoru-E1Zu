@@ -8,7 +8,7 @@ from Powers import DB_NAME, DB_URI, LOGGER
 import pymongo
 
 
-chatsdb = db.chats
+
 nexaub_antif = db.nexa_mongodb
 
 kukib = db.kuki
