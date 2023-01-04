@@ -8,14 +8,6 @@ from Powers import DB_NAME, DB_URI, LOGGER
 import pymongo
 
 
-
-nexaub_antif = database.nexa_mongodb
-
-
-nightmod =database.nightmode2
-taggeddb = database.tagallert
-
-botlock = database.botlock
 afkusers = database.afkusers
 
 
