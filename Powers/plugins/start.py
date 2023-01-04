@@ -5,8 +5,7 @@ from pyrogram.enums import ChatMemberStatus as CMS
 from pyrogram.enums import ChatType
 from pyrogram.errors import (MediaCaptionTooLong, MessageNotModified,
                              QueryIdInvalid, UserIsBlocked)
-from pyrogram.types import (CallbackQuery, InlineKeyboardButton,
-                            InlineKeyboardMarkup, Message)
+from pyrogram.types import (CallbackQuery, Message)
 
 from Powers import HELP_COMMANDS, LOGGER
 from Powers.bot_class import Gojo
