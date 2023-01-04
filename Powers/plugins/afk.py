@@ -10,7 +10,7 @@ from Powers import LOGGER
 from Powers.bot_class import Gojo 
 
 
-from Powers import Gojo
+
 from Powers.utils.filter_groups import afkcheacker
 
 
