@@ -1,4 +1,4 @@
-from Powers.database import afkusers
+from Powers.database import*
 
 async def is_afk(user_id: int) -> bool:
     user = await afkusers.find_one({"user_id": user_id})
