@@ -11,19 +11,13 @@ import pymongo
 
 nexaub_antif = database.nexa_mongodb
 
-kukib = database.kuki
-lunab = database.luna
+
 nightmod =database.nightmode2
 taggeddb = database.tagallert
 
 botlock = database.botlock
 afkusers = database.afkusers
 
-myapp = pymongo.MongoClient(MONGO_URL)
-dbx = myapp["AsyncIOMotorCursor"]
-
-federation = dbx['federation']
-nm = dbx['Nightmode']
 
 
 try:
