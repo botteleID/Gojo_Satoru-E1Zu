@@ -5,6 +5,27 @@ from pymongo.errors import PyMongoError
 
 from Powers import DB_NAME, DB_URI, LOGGER
 
+import pymongo
+
+
+chatsdb = db.chats
+nexaub_antif = db.nexa_mongodb
+
+kukib = db.kuki
+lunab = db.luna
+nightmod =db.nightmode2
+taggeddb = db.tagallert
+
+botlock = db.botlock
+afkusers = db.afkusers
+
+myapp = pymongo.MongoClient(MONGO_URL)
+dbx = myapp["AsyncIOMotorCursor"]
+
+federation = dbx['federation']
+nm = dbx['Nightmode']
+
+
 try:
     Powers_db_client = MongoClient(DB_URI)
 except PyMongoError as f:
