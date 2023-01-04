@@ -8,7 +8,7 @@ from Powers import DB_NAME, DB_URI, LOGGER
 import pymongo
 
 
-afkusers = database.afkusers
+afkusers = afkusers
 
 
 
