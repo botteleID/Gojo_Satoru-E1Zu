@@ -23,7 +23,6 @@ from pykeyboard import InlineKeyboard
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 
 from Powers.utils.errors import capture_err
-from misskaty.helper.tools import rentry, GENRES_EMOJI
 from Powers.utils.http_helper import*
 
 
