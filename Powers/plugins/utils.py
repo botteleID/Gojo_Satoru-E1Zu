@@ -218,7 +218,7 @@ async def imdbs(_, m: Message):
     REPLY = ""
     
      if name:
-        REPLY += f"<b>📹 Judul:</b> {name})"
+        REPLY += f"<b>📹 Judul:</b> {name}"
 
      if runtime:
         REPLY += f"<b>Durasi: </b> {runtime}"
