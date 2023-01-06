@@ -204,7 +204,7 @@ async def imdbs(_, m: Message):
 
     avtar = r.get("Poster", None)
     genre = r.get("Genre", None)
-    name = r.get("Title", None)
+    judul = r.get("Title", None)
     
     runtime = r.get("Runtime", None)
     imdbr = r.get("imdbRating", None)
@@ -217,8 +217,8 @@ async def imdbs(_, m: Message):
 
     REPLY = ""
     
-     if name:
-        REPLY += f"<b>📹 Judul:</b> {name}"
+     if judul:
+        REPLY += f"<b>📹 Judul:</b> {judul}"
 
      if runtime:
         REPLY += f"<b>Durasi: </b> {runtime}"
