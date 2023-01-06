@@ -251,6 +251,75 @@ async def github(_, m: Message):
     await m.reply_text(REPLY)
     return
 
+    @Gojo.on_message(
+    command(["imdb"]) & (filters.group | filters.private),
+)
+async def webimdb(_, m: Message):
+    if len(m.text.split()) == 2:
+        username = m.text.split(maxsplit=1)[1]
+        LOGGER.info(f"{m.from_user.id} used webimdb cmd in {m.chat.id}")
+    else:
+        await m.reply_text(
+            f"Usage: <code>{Config.PREFIX_HANDLER}id imdb</code>",
+        )
+        return
+    username = username.split("/")[-1]
+    URL = f"https://www.omdbapi.com/?apikey=95cc8ace&i={username}"
+    try:
+        r = await get(URL, timeout=5)
+    except asyncio.TimeoutError:
+        return await m.reply_text("request timeout")
+    except Exception as e:
+        return await m.reply_text(f"ERROR: `{e}`")
+
+    avtar = r.get("Poster", None)
+    gnre = r.get("Genre", None)
+    name = r.get("Title", None)
+    company = r.get("company", None)
+    followers = r.get("followers", 0)
+    following = r.get("following", 0)
+    public_repos = r.get("public_repos", 0)
+    bio = r.get("Plot", None)
+    created_at = r.get("created_at", "Not Found")
+    location = r.get("location", None)
+    email = r.get("email", None)
+    updated_at = r.get("updated_at", "Not Found")
+    blog = r.get("blog", None)
+    twitter = r.get("twitter_username", None)
+
+    REPLY = ""
+    if name:
+        REPLY += f"<b>Judul:</b> {name}:"
+    if gnre:
+        REPLY += f"\n<b>Genre</b> <a href='{gnre}'>{username}</a>"
+    REPLY += f"\n<b>🔑 Public Repos:</b> {public_repos}"
+    REPLY += f"\n<b>🧲 Followers:</b> {followers}"
+    REPLY += f"\n<b>✨ Following:</b> {following}"
+    if email:
+        REPLY += f"\n<b>✉️ Email:</b> <code>{email}</code>"
+    if company:
+        org_url = company.strip("@")
+        REPLY += f"\n<b>™️ Organization:</b> <a href='https://github.com/{org_url}'>{company}</a>"
+    if blog:
+        bname = blog.split(".")[-2]
+        bname = bname.split("/")[-1]
+        REPLY += f"\n<b>📝 Blog:</b> <a href={blog}>{bname}</a>"
+    if twitter:
+        REPLY += f"\n<b>⚜️ Twitter:</b> <a href='https://twitter.com/{twitter}'>{twitter}</a>"
+    if location:
+        REPLY += f"\n<b>🚀 Location:</b> <code>{location}</code>"
+    REPLY += f"\n<b>💫 Created at:</b> <code>{created_at}</code>"
+    REPLY += f"\n<b>⌚️ Updated at:</b> <code>{updated_at}</code>"
+    if bio:
+        REPLY += f"\n\n<b>📜 Plot:</b> <code>{bio}</code>"
+
+    if avtar:
+        return await m.reply_photo(photo=f"{avtar}", caption=REPLY)
+    await m.reply_text(REPLY)
+    return
+
+
+
 
 pattern = re.compile(r"^text/|json$|yaml$|xml$|toml$|x-sh$|x-shellscript$")
 BASE = "https://batbin.me/"
