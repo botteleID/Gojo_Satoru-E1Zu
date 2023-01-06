@@ -171,7 +171,7 @@ async def fun_table(_, m: Message):
 async def truth(_, m: Message):
     reply_text = m.reply_to_message.reply_text if m.reply_to_message else m.reply_text
     await reply_text(choice(extras.TRUTHS))
-    LOGGER.info(f"{m.from_user.id} reacted in {m.chat.id}")
+    LOGGER.info(f"{m.from_user.id} tru in {m.chat.id}")
     return
 
 @Gojo.on_message(command("dare"))
@@ -185,14 +185,14 @@ async def dare(_, m: Message):
 async def motivasi(_, m: Message):
     reply_text = m.reply_to_message.reply_text if m.reply_to_message else m.reply_text
     await reply_text(choice(extras.MOTIVASI))
-    LOGGER.info(f"{m.from_user.id} dares in {m.chat.id}")
+    LOGGER.info(f"{m.from_user.id} motiv in {m.chat.id}")
     return 
     
     @Gojo.on_message(command("g"))
 async def gombal(_, m: Message):
     reply_text = m.reply_to_message.reply_text if m.reply_to_message else m.reply_text
     await reply_text(choice(extras.GOMBAL))
-    LOGGER.info(f"{m.from_user.id} gombal in {m.chat.id}")
+    LOGGER.info(f"{m.from_user.id} gombals in {m.chat.id}")
     return 
 
 @Gojo.on_message(command("weebify"))
