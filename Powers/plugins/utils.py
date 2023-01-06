@@ -203,17 +203,15 @@ async def imdbs(_, m: Message):
         return await m.reply_text(f"ERROR: `{e}`")
 
     avtar = r.get("Poster", None)
-    genre = r.get("Genre", None)
     judul = r.get("Title", None)
-    
+    genre = r.get("Genre", None)    
     runtime = r.get("Runtime", None)
     imdbr = r.get("imdbRating", None)
     rilis = r.get("Released", None)
-
-    bio = r.get("Plot", None)
     negara = r.get("Country", None)
     bahasa = r.get("Language", None)
-   
+    bio = r.get("Plot", None)
+    
 
     REPLY = ""    
      if judul:
@@ -221,14 +219,8 @@ async def imdbs(_, m: Message):
         REPLY += f"<b>Durasi: </b> {runtime}"
         REPLY += f"<b>Peringkat: </b> {imdbr}⭐"     
         REPLY += f"<b>Rilis: </b> {rilis}"
-      
-    if genre:
         REPLY += f"\n<b>Genre:</b> {genre}"
-      
-    if negara:
         REPLY += f"\n<b>Negara:</b> {negara}"
-     
-     if bahasa:
         REPLY += f"\n<b>Bahasa:</b> {bahasa}"
 
     if bio:
