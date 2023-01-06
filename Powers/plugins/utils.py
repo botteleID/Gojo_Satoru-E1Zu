@@ -205,11 +205,11 @@ async def imdbs(_, m: Message):
     avtar = r.get("Poster", None)
     judul = r.get("Title", None)
     genre = r.get("Genre", None)    
-    waktu = r.get("Runtime", None)
+    
     
     rilis = r.get("Released", None)
     negara = r.get("Country", None)
-    bahasa = r.get("Language", None)
+    
     bio = r.get("Plot", None)
     
 
@@ -220,8 +220,7 @@ async def imdbs(_, m: Message):
         REPLY += f"<b>Durasi: </b> {waktu}"
         REPLY += f"<b>Rilis: </b> {rilis}"
         REPLY += f"\n<b>Genre:</b> {genre}"
-        REPLY += f"\n<b>Negara:</b> {negara}"
-        REPLY += f"\n<b>Bahasa:</b> {bahasa}"
+        REPLY += f"\n<b>Negara:</b> {negara}"        
 
     if bio:
         REPLY += f"\n\n<b>📜 Plot:</b> <code>{bio}</code>"
