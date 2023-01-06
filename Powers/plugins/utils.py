@@ -224,6 +224,16 @@ async def github(_, m: Message):
     await m.reply_text(REPLY)
     return
 
+pattern = re.compile(r"^text/|json$|yaml$|xml$|toml$|x-sh$|x-shellscript$")
+BASE = "https://batbin.me/"
+
+
+async def paste(content: str):
+    resp = await post(f"{BASE}api/v2/paste", data=content)
+    if not resp["success"]:
+        return
+    return BASE + resp["message"]
+
 
 @Gojo.on_message(
     command(["github", "git"]) & (filters.group | filters.private),
