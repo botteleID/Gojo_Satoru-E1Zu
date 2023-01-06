@@ -181,64 +181,7 @@ async def get_gifid(_, m: Message):
         await m.reply_text(text="Please reply to a gif to get it's ID.")
     return
 
-@Gojo.on_message(
-    command(["imdb"]) & (filters.group | filters.private),
-)
-async def imdbs(_, m: Message):
-    if len(m.text.split()) == 2:
-        username = m.text.split(maxsplit=1)[1]
-        LOGGER.info(f"{m.from_user.id} used imdbs cmd in {m.chat.id}")
-    else:
-        await m.reply_text(
-            f"Usage: <code>{Config.PREFIX_HANDLER}github username</code>",
-        )
-        return
-    username = username.split("/")[-1]
-    URL = f"https://www.omdbapi.com/?apikey=95cc8ace&i={username}"
-    try:
-        r = await get(URL, timeout=5)
-    except asyncio.TimeoutError:
-        return await m.reply_text("request timeout")
-    except Exception as e:
-        return await m.reply_text(f"ERROR: `{e}`")
 
-    avtar = r.get("Poster", None)
-    judul = r.get("Title", None)
-    genre = r.get("Genre", None)    
-    
-    
-    rilis = r.get("Released", None)
-    negara = r.get("Country", None)
-    
-    bio = r.get("Plot", None)
-    
-
-    REPLY = ""    
-     if judul:
-        REPLY += f"<b>📹 Judul:</b> {judul}"
-     if waktu:
-        REPLY += f"<b>Durasi: </b> {waktu}"
-        REPLY += f"<b>Rilis: </b> {rilis}"
-        REPLY += f"\n<b>Genre:</b> {genre}"
-        REPLY += f"\n<b>Negara:</b> {negara}"        
-
-    if bio:
-        REPLY += f"\n\n<b>📜 Plot:</b> <code>{bio}</code>"
-
-    if avtar:
-        return await m.reply_photo(photo=f"{avtar}", caption=REPLY)
-    await m.reply_text(REPLY)
-    return
-
-pattern = re.compile(r"^text/|json$|yaml$|xml$|toml$|x-sh$|x-shellscript$")
-BASE = "https://batbin.me/"
-
-
-async def paste(content: str):
-    resp = await post(f"{BASE}api/v2/paste", data=content)
-    if not resp["success"]:
-        return
-    return BASE + resp["message"]
 
 
 @Gojo.on_message(
