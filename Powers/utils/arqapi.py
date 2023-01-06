@@ -14,8 +14,8 @@ from search_engine_parser import GoogleSearch
 from src import BOT_ID, Owner, ARQ_API_URL, ARQ_API_KEY
 from src import pbot
 
-ARQ_API = "WZQUBA-PFAZQJ-OMIINH-MIVHYM-ARQ"
-ARQ_API_KEY = "WZQUBA-PFAZQJ-OMIINH-MIVHYM-ARQ"
+ARQ_API = "XDLAKW-BZUJEE-PZTNXC-AMLEDM-ARQ"
+ARQ_API_KEY = "XDLAKW-BZUJEE-PZTNXC-AMLEDM-ARQ"
 SUDOERS = Owner
 ARQ_API_URL = "https://thearq.tech"
 
