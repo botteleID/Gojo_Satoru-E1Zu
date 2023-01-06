@@ -227,7 +227,7 @@ async def imdbs(_, m: Message):
         REPLY += f"<b>Peringkat: </b> {imdbr}⭐"
      
      if rilis:
-        REPLY += f"<b>Rilis: </b> {rilis}⭐"
+        REPLY += f"<b>Rilis: </b> {rilis}"
       
     if genre:
         REPLY += f"\n<b>Genre:</b> {genre}"
