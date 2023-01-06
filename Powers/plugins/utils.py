@@ -215,18 +215,11 @@ async def imdbs(_, m: Message):
     bahasa = r.get("Language", None)
    
 
-    REPLY = ""
-    
+    REPLY = ""    
      if judul:
         REPLY += f"<b>📹 Judul:</b> {judul}"
-
-     if runtime:
         REPLY += f"<b>Durasi: </b> {runtime}"
-
-     if imdbr:
-        REPLY += f"<b>Peringkat: </b> {imdbr}⭐"
-     
-     if rilis:
+        REPLY += f"<b>Peringkat: </b> {imdbr}⭐"     
         REPLY += f"<b>Rilis: </b> {rilis}"
       
     if genre:
