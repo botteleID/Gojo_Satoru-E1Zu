@@ -24,7 +24,7 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQ
 
 from Powers.utils.errors import capture_err
 from misskaty.helper.tools import rentry, GENRES_EMOJI
-from Powers.utils.http_helper import 
+from Powers.utils.http_helper import*
 
 
 LOGGER = getLogger(__name__)
