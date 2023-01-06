@@ -405,7 +405,7 @@ async def tr(_, message):
 
 
 __PLUGIN__ = "utils"
-_DISABLE_CMDS_ = ["paste", "wiki", "id", "gifid", "tr", "github", "git"]
+_DISABLE_CMDS_ = ["paste", "imdb", "wiki", "id", "gifid", "tr", "github", "git"]
 __alt_name__ = ["util", "misc", "tools"]
 
 __HELP__ = """
