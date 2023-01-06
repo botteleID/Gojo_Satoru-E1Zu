@@ -251,8 +251,8 @@ async def github(_, m: Message):
     await m.reply_text(REPLY)
     return
 
-    @Gojo.on_message(
-    command(["imdb"]) & (filters.group | filters.private),
+@Gojo.on_message(
+   command(["imdb"]) & (filters.group | filters.private),
 )
 async def imdb(_, m: Message):
     if len(m.text.split()) == 2:
