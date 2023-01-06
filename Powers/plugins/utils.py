@@ -254,10 +254,10 @@ async def github(_, m: Message):
     @Gojo.on_message(
     command(["imdb"]) & (filters.group | filters.private),
 )
-async def webimdb(_, m: Message):
+async def imdb(_, m: Message):
     if len(m.text.split()) == 2:
         username = m.text.split(maxsplit=1)[1]
-        LOGGER.info(f"{m.from_user.id} used webimdb cmd in {m.chat.id}")
+        LOGGER.info(f"{m.from_user.id} used imdb cmd in {m.chat.id}")
     else:
         await m.reply_text(
             f"Usage: <code>{Config.PREFIX_HANDLER}id imdb</code>",
