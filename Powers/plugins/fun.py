@@ -44,12 +44,6 @@ async def fun_run(_, m: Message):
     LOGGER.info(f"{m.from_user.id} runed in {m.chat.id}")
     return
 
-@Gojo.on_message(command("bucin"))
-async def fun_buc(_, m: Message):
-    await m.reply_text(choice(extras.BUCIN_STRINGS))
-    LOGGER.info(f"{m.from_user.id} bucin in {m.chat.id}")
-    return
-
 
 @Gojo.on_message(command("slap"))
 async def fun_slap(c: Gojo, m: Message):
@@ -172,7 +166,34 @@ async def fun_table(_, m: Message):
     await reply_text(choice(extras.REACTIONS))
     LOGGER.info(f"{m.from_user.id} reacted in {m.chat.id}")
     return
+    
+@Gojo.on_message(command("truth"))
+async def fun_table(_, m: Message):
+    reply_text = m.reply_to_message.reply_text if m.reply_to_message else m.reply_text
+    await reply_text(choice(extras.TRUTHS))
+    LOGGER.info(f"{m.from_user.id} reacted in {m.chat.id}")
+    return
 
+@Gojo.on_message(command("dare"))
+async def fun_table(_, m: Message):
+    reply_text = m.reply_to_message.reply_text if m.reply_to_message else m.reply_text
+    await reply_text(choice(extras.DARES))
+    LOGGER.info(f"{m.from_user.id} dares in {m.chat.id}")
+    return    
+
+@Gojo.on_message(command("m"))
+async def fun_table(_, m: Message):
+    reply_text = m.reply_to_message.reply_text if m.reply_to_message else m.reply_text
+    await reply_text(choice(extras.MOTIVASI))
+    LOGGER.info(f"{m.from_user.id} dares in {m.chat.id}")
+    return 
+    
+    @Gojo.on_message(command("g"))
+async def fun_table(_, m: Message):
+    reply_text = m.reply_to_message.reply_text if m.reply_to_message else m.reply_text
+    await reply_text(choice(extras.GOMBAL))
+    LOGGER.info(f"{m.from_user.id} gombal in {m.chat.id}")
+    return 
 
 @Gojo.on_message(command("weebify"))
 async def weebify(_, m: Message):
@@ -221,24 +242,27 @@ _DISABLE_CMDS_ = [
     "roll",
     "slap",
     "runs",
-    "bucin",
     "shout",
     "insult",
     "shrug",
+    "truth",
+    "dare",
+    "g",
+    "m",
 ]
 
 __HELP__ = """
 **Fun**
 
-• /runs: reply a random string from an array of replies.
-• /slap: slap a user, or get slapped if not a reply.
-• /insult: to insult a user, or get insulted if not a reply
-• /shrug : get shrug XD.
-• /decide : Randomly answers yes/no/maybe
-• /toss : Tosses A coin
-• /yes : check urself :V
-• /no : check urself :V
-• /bluetext : check urself :V
-• /roll : Roll a dice.
-• /react : Random Reaction
-• /shout `<keyword>`: write anything you want to give loud shout."""
+• /run: Balas string acak dari array balasan.
+• /slap: menampar pengguna, atau ditampar jika bukan balasan.
+• /insult: untuk menghina pengguna, atau dihina jika bukan balasan
+• /shrug bahu : mengangkat bahu XD.
+• /decide : Secara acak menjawab ya / tidak / mungkin
+• /toss : Lempar koin
+• /yes : cek urself :V
+• /no : cek urself :V
+• /bluetext : periksa urself :V
+• /roll : Lempar dadu.
+• /react : Reaksi Acak
+• /shout '<keyword>': tulis apa saja yang ingin kamu berikan teriakan nyaring."""
