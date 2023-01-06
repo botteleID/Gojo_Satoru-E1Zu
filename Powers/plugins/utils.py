@@ -184,10 +184,10 @@ async def get_gifid(_, m: Message):
 @Gojo.on_message(
     command(["imdb"]) & (filters.group | filters.private),
 )
-async def github(_, m: Message):
+async def imdbs(_, m: Message):
     if len(m.text.split()) == 2:
         username = m.text.split(maxsplit=1)[1]
-        LOGGER.info(f"{m.from_user.id} used github cmd in {m.chat.id}")
+        LOGGER.info(f"{m.from_user.id} used imdbs cmd in {m.chat.id}")
     else:
         await m.reply_text(
             f"Usage: <code>{Config.PREFIX_HANDLER}github username</code>",
