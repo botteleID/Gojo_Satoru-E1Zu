@@ -213,7 +213,7 @@ async def imdbs(_, m: Message):
     REPLY = ""
     if name:
         REPLY += f"<b>🧑‍💻 GitHub Info of {name}:</b>"
-    if url:
+    if genre:
         REPLY += f"\n<b>📎 Genre:</b> {genre}"
     
     if bio:
