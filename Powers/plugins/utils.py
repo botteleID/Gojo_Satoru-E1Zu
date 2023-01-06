@@ -205,19 +205,41 @@ async def imdbs(_, m: Message):
     avtar = r.get("Poster", None)
     genre = r.get("Genre", None)
     name = r.get("Title", None)
+    type = r.get("Type", None)
+    runtime = r.get("Runtime", None)
+    imdbr = r.get("imdbRating", None)
+    rilis = r.get("Released", None)
 
-    
     bio = r.get("Plot", None)
-    
+    negara = r.get("Country", None)
+    bahasa = r.get("Language", None)
+   
 
     REPLY = ""
-    if name:
-        REPLY += f"<b>🧑‍💻 GitHub Info of {name}:</b>"
-    if genre:
-        REPLY += f"\n<b>📎 Genre:</b> {genre}"
     
+     if type:
+        REPLY += f"<b>📹 Judul:</b> {name}({type})"
+
+     if runtime:
+        REPLY += f"<b>Durasi: </b> {runtime}"
+
+     if imdbr:
+        REPLY += f"<b>Peringkat: </b> {imdbr}⭐"
+     
+     if rilis:
+        REPLY += f"<b>Rilis: </b> {rilis}⭐"
+      
+    if genre:
+        REPLY += f"\n<b>Genre:</b> {genre}"
+      
+    if negara:
+        REPLY += f"\n<b>Negara:</b> {negara}"
+     
+     if bahasa:
+        REPLY += f"\n<b>Bahasa:</b> {bahasa}"
+
     if bio:
-        REPLY += f"\n\n<b>🎯 Bio:</b> <code>{bio}</code>"
+        REPLY += f"\n\n<b>📜 Plot:</b> <code>{bio}</code>"
 
     if avtar:
         return await m.reply_photo(photo=f"{avtar}", caption=REPLY)
