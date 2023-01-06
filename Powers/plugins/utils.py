@@ -204,7 +204,7 @@ async def imdbs(_, m: Message):
 
     avtar = r.get("Poster", None)
     genre = r.get("Genre", None)
-    name = r.get("Title", None, "Type")
+    name = r.get("Title", None,)
     
     runtime = r.get("Runtime", None)
     imdbr = r.get("imdbRating", None)
