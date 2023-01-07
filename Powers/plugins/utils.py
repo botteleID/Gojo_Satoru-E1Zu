@@ -42,7 +42,7 @@ async def wiki(_, m: Message):
     if res:
         result = f"<b>{search}</b>\n\n"
         result += f"<i>{res}</i>\n"
-        result += f"""<a href="https://en.wikipedia.org/wiki/{search.replace(" ", "%20")}">Read more...</a>"""
+        result += f"""<a href="https://id.wikipedia.org/wiki/{search.replace(" ", "%20")}">Read more...</a>"""
         try:
             return await m.reply_text(
                 result,
