@@ -42,7 +42,9 @@ async def fun_shout(_, m: Message):
 
 
 
-@Gojo.on_message_handler(content_types=["text"])
+
+@Gojo.message_handler(func=lambda message: True)
+
 async def send_text(_, m: Message):
     if len(m.text.lower()) == "hello":
         await m.reply_text(text="ini hello")        
