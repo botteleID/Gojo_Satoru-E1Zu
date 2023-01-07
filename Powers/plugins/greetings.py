@@ -364,7 +364,7 @@ async def member_has_left(c: Gojo, member: ChatMemberUpdated):
         if user.id in DEV_USERS:
             await c.send_animation(
                 chat_id=member.chat.id,
-                animation="./extras/goodbye.gif",
+                animation="./extras/goodbye-min.gif",
                 caption="Will miss you **DEV** :(",
             )
             return
