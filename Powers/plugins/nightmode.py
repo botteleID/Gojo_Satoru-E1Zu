@@ -1,7 +1,7 @@
 # Auto Close and Open Group, I dont have time to add Database Support
 from pyrogram.types import ChatPermissions
-from pyrogram import Client,
- filters
+
+filters
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 import pytz
 import traceback
