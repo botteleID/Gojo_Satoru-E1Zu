@@ -27,6 +27,19 @@ RUN_STRINGS = (
 )
 
 
+APAKAH = (        "Iya", 
+                 "Tidak", 
+                 "Mungkin", 
+                 "Mungkin Tidak", 
+                 "Bisa jadi", 
+                 "Mungkin Tidak",
+                 "Tidak Mungkin",
+                 "Yo Ndak Tau Kok Tanya Saya",
+                 "Pala bapak kau pecah",
+                 "Apa iya?",
+                 "Tanya aja sama mamak kau tu pler",
+ )
+
 SLAP_GOJO_TEMPLATES = (
     "Tampar aku sekali lagi dan aku akan membungkammu." ,
     "Jangan berani menamparku lagi ||ASSH-0-LE||." ,
