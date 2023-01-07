@@ -39,9 +39,9 @@ async def fun_shout(_, m: Message):
 
 @Gojo.on_message(command("ask"))
 async def apakah(_, m: Message):
-    quew = m.command_match.group(1)
-    if not quew:
-        await m.reply('Berikan saya pertanyaan 😐')
+    if len(m.text.split()) <= 1:
+        await m.reply_text(text="Berikan saya pertanyaan 😐")
+        
         return
     await m.reply_text(choice(extras.APAKAH))
 
