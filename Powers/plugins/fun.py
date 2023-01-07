@@ -37,13 +37,24 @@ async def fun_shout(_, m: Message):
         await m.reply_text(f"Error: {e}")
         return
 
-@Gojo.on_message(command("ask"))
-async def apakah(_, m: Message):
-    if len(m.text.split()) <= 1:
-        await m.reply_text(text="Berikan saya pertanyaan 😐")
-        
-        return
-    await m.reply_text(choice(extras.APAKAH))
+
+
+
+@Gojo.bot.message_handler(func=check_function)
+
+async def check_function(_, m: Message):
+    if len(m.text.lower()) == "hello":
+        await m.reply_text(text="ini hello")        
+        return True
+    elif len(m.text.lower()) == "bye":
+        await m.reply_text(text="ini good bye") 
+        return True
+    else:
+        pass
+
+
+
+
 
 
 @Gojo.on_message(command("runs"))
