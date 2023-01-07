@@ -4,6 +4,8 @@ from random import choice
 from pyrogram import enums
 from pyrogram.errors import MessageTooLong
 from pyrogram.types import Message
+import telebot
+from telebot import types
 
 from Powers import DEV_USERS, LOGGER
 from Powers.bot_class import Gojo
@@ -40,8 +42,7 @@ async def fun_shout(_, m: Message):
 
 
 
-@Gojo.on_message(content_types=("text"));
-
+@Gojo.on_message(content_types=["text"])
 async def send_text(_, m: Message):
     if len(m.text.lower()) == "hello":
         await m.reply_text(text="ini hello")        
