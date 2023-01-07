@@ -440,7 +440,7 @@ async def chatbot(c, m):
 
 
 __PLUGIN__ = "utils"
-_DISABLE_CMDS_ = ["ask", paste", "imdb", "wiki", "id", "gifid", "tr", "github", "git"]
+_DISABLE_CMDS_ = ["ask", "paste", "imdb", "wiki", "id", "gifid", "tr", "github", "git"]
 __alt_name__ = ["util", "misc", "tools"]
 
 __HELP__ = """
