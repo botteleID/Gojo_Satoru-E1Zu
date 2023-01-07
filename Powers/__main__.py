@@ -10,7 +10,7 @@ import sys
 import traceback
 
 from Powers import (
-    app,
+    
     telethn,
     pbot,
     updater,
