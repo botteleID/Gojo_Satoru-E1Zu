@@ -286,6 +286,9 @@ async def imdb(_, m: Message):
     bhsa = r.get("Language", "Not Found")
     blog = r.get("blog", None)
     twitter = r.get("twitter_username", None)
+    strdara = r.get("Director", 0)
+    pnlis = r.get("Writer", None)
+    artis = r.get("Actors", "Not Found")
 
     REPLY = ""
     if name:
@@ -310,6 +313,9 @@ async def imdb(_, m: Message):
         REPLY += f"\n<b>🚀 Location:</b> <code>{location}</code>"
     REPLY += f"\n<b>Negara:</b> <code>{negara}</code>"
     REPLY += f"\n<b>Bahasa:</b> <code>{bhsa}</code>"
+    REPLY += f"\n\n<b>🙎 Info Cast:\nSutradara:</b> <code>{strdara}</code>"
+    REPLY += f"\n<b>Penulis:</b> <code>{pnlis}</code>"
+    REPLY += f"\n<b>Pemeran:</b> <code>{artis}</code>"
     if bio:
         REPLY += f"\n\n<b>📜 Plot:</b> <code>{bio}</code>"
 
