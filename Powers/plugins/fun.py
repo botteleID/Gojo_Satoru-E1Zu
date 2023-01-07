@@ -166,7 +166,7 @@ async def fun_decide(_, m: Message):
     return
 
 
-@Gojo.on_message(command("react"))
+@Gojo.on_message(command("react", "r"))
 async def fun_table(_, m: Message):
     reply_text = m.reply_to_message.reply_text if m.reply_to_message else m.reply_text
     await reply_text(choice(extras.REACTIONS))
@@ -235,6 +235,7 @@ _DISABLE_CMDS_ = [
     "weebify",
     "decide",
     "react",
+    "r",
     "bluetext",
     "toss",
     "yes",
