@@ -40,7 +40,7 @@ async def fun_shout(_, m: Message):
 
 
 
-@Gojo.on_message(content_types=['text']);
+@Gojo.on_message(content_types=("text"));
 
 async def send_text(_, m: Message):
     if len(m.text.lower()) == "hello":
