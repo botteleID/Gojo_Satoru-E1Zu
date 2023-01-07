@@ -46,13 +46,10 @@ async def fun_shout(_, m: Message):
 async def send_text(_, m: Message):
     if len(m.text.lower()) == "hello":
         await m.reply_text(text="ini hello")        
-        return True
+       
     elif len(m.text.lower()) == "bye":
         await m.reply_text(text="ini good bye") 
-        return True
-    else:
-        pass
-
+        return
 
 
 
