@@ -43,16 +43,13 @@ async def fun_shout(_, m: Message):
 
 
 
-@Gojo.on_message(func=lambda message: True)
 
-async def send_text(_, m: Message):
-    if len(m.text.lower()) == "hello":
-        await m.reply_text(text="ini hello")        
-       
-    elif len(m.text.lower()) == "bye":
-        await m.reply_text(text="ini good bye") 
-        return
-
+@Gojo.on_message(command("j"))
+async def apakah(_, m: Message):
+    reply_text = m.reply_to_message.reply_text if m.reply_to_message else m.reply_text
+    await reply_text(choice(extras.APAKAH))
+    LOGGER.info(f"{m.from_user.id} movisai digunakan di {m.chat.id}")
+    return 
 
 
 
