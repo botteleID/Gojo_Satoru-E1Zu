@@ -8,9 +8,7 @@ import traceback
 
 from traceback import format_exc
 
-from Powers.utils.custom_filters import command 
-from Powers import LOGGER
-from Powers.bot_class import Gojo 
+from Powers import LOGGER 
 
 from datetime import datetime
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
