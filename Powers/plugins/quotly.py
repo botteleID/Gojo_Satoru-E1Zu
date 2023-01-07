@@ -14,7 +14,7 @@ from Powers.bot_class import Gojo
 
 
 async def quotify(messages: list):
-    response = await arq.quotly(messages)
+    response = await quotly(messages)
     if not response.ok:
         return [False, response.result]
     sticker = response.result
