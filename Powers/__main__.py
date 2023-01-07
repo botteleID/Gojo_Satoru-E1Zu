@@ -9,12 +9,7 @@ import re
 import sys
 import traceback
 
-from Powers import (
-    
-    telethn,
-    pbot,
-    updater,
-)
+
 
 if __name__ == "__main__":
     Gojo().run()
