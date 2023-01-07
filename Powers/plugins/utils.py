@@ -273,12 +273,12 @@ async def imdb(_, m: Message):
         return await m.reply_text(f"ERROR: `{e}`")
 
     avtar = r.get("Poster", None)
-    gnre = r.get("Genre", None)
+    rntime = r.get("Runtime", None)
     name = r.get("Title", None)
     company = r.get("company", None)
     followers = r.get("followers", 0)
     following = r.get("following", 0)
-    public_repos = r.get("public_repos", 0)
+    public_repos = r.get("imdbRating", 0)
     bio = r.get("Plot", None)
     created_at = r.get("created_at", "Not Found")
     location = r.get("location", None)
@@ -289,12 +289,12 @@ async def imdb(_, m: Message):
 
     REPLY = ""
     if name:
-        REPLY += f"<b>Judul:</b> {name}:"
-    if gnre:
-        REPLY += f"\n<b>Genre</b> <a href='{gnre}'>{username}</a>"
-    REPLY += f"\n<b>🔑 Public Repos:</b> {public_repos}"
-    REPLY += f"\n<b>🧲 Followers:</b> {followers}"
-    REPLY += f"\n<b>✨ Following:</b> {following}"
+        REPLY += f"<b>📹 Judul:</b> {name}"
+    if rntime:
+        REPLY += f"\n<b>Durasi:</b> <a href='{rntime}'>{username}</a>"
+    REPLY += f"\n<b>Peringkat:</b> {public_repos}"
+    REPLY += f"\n<b>Rilis:</b> {followers}"
+    REPLY += f"\n<b>Genre:</b> {following}"
     if email:
         REPLY += f"\n<b>✉️ Email:</b> <code>{email}</code>"
     if company:
@@ -308,8 +308,8 @@ async def imdb(_, m: Message):
         REPLY += f"\n<b>⚜️ Twitter:</b> <a href='https://twitter.com/{twitter}'>{twitter}</a>"
     if location:
         REPLY += f"\n<b>🚀 Location:</b> <code>{location}</code>"
-    REPLY += f"\n<b>💫 Created at:</b> <code>{created_at}</code>"
-    REPLY += f"\n<b>⌚️ Updated at:</b> <code>{updated_at}</code>"
+    REPLY += f"\n<b>Negara:</b> <code>{created_at}</code>"
+    REPLY += f"\n<b>Bahasa:</b> <code>{updated_at}</code>"
     if bio:
         REPLY += f"\n\n<b>📜 Plot:</b> <code>{bio}</code>"
 
