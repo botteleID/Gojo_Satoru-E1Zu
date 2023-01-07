@@ -297,10 +297,11 @@ async def imdb(_, m: Message):
     if name:
         REPLY += f"<b>📹 Judul:</b> {name} ({tipe})"
     if rntime:
+        gnreku = "#".join(gnre)
         REPLY += f"\n<b>Durasi:</b> {rntime}"
     REPLY += f"\n<b>Rating:</b> {public_repos} dari {voter} pengguna"
     REPLY += f"\n<b>Rilis:</b> {rlis}"
-    REPLY += f"\n<b>Genre:</b> {gnre}"
+    REPLY += f"\n<b>Genre:</b> {gnreku}"
     if email:
         REPLY += f"\n<b>✉️ Email:</b> <code>{email}</code>"
     if company:
