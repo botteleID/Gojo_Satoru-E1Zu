@@ -5,7 +5,7 @@ from pyrogram import enums
 from pyrogram.errors import MessageTooLong
 from pyrogram.types import Message
 import telebot
-
+from telebot import types
 
 from Powers import DEV_USERS, LOGGER
 from Powers.bot_class import Gojo
