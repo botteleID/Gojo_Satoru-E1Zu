@@ -5,7 +5,7 @@ from Powers import LOGGER
 from Powers.bot_class import Gojo
 
 from Powers.utils.errors import capture_err
-from Powers.database.dbfunctions import get_couple, save_couple
+
 from pyrogram import filters
 import random
 from datetime import datetime
