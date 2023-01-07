@@ -290,13 +290,15 @@ async def imdb(_, m: Message):
     pnlis = r.get("Writer", None)
     artis = r.get("Actors", "Not Found")
     tipe = r.get("Type", "Not Found")
+    voter = r.get("imdbVotes", "Not Found")
+
 
     REPLY = ""
     if name:
-        REPLY += f"<b>📹 Judul:</b> {name}({tipe})"
+        REPLY += f"<b>📹 Judul:</b> {name} ({tipe})"
     if rntime:
         REPLY += f"\n<b>Durasi:</b> {rntime}"
-    REPLY += f"\n<b>Peringkat:</b> {public_repos}"
+    REPLY += f"\n<b>Rating:</b> {public_repos} dari {voter} pengguna"
     REPLY += f"\n<b>Rilis:</b> {rlis}"
     REPLY += f"\n<b>Genre:</b> {gnre}"
     if email:
