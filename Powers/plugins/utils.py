@@ -289,10 +289,11 @@ async def imdb(_, m: Message):
     strdara = r.get("Director", 0)
     pnlis = r.get("Writer", None)
     artis = r.get("Actors", "Not Found")
+    tipe = r.get("Type", "Not Found")
 
     REPLY = ""
     if name:
-        REPLY += f"<b>📹 Judul:</b> {name}"
+        REPLY += f"<b>📹 Judul:</b> {name}({tipe})"
     if rntime:
         REPLY += f"\n<b>Durasi:</b> {rntime}"
     REPLY += f"\n<b>Peringkat:</b> {public_repos}"
