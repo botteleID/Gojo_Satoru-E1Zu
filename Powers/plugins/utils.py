@@ -412,32 +412,6 @@ async def tr(_, message):
         f"<b>Translated:</b> from {detectlang} to {target_lang} \n<code>``{tekstr.text}``</code>",
     )
 
-@Gojo.on_message(filters.command("ask", COMMAND_HANDLER))
-
-async def chatbot(c, m):
-    if len(m.command) == 1:
-        return await m.reply(f"Gunakan perintah <code>/{m.command[0]} [pertanyaan]</code> untuk menanyakan pertanyaan menggunakan AI.")
-    pertanyaan = m.text.split(" ", maxsplit=1)[1]
-    headers = {
-        "Content-Type": "application/json",
-        "Authorization": f"Bearer {OPENAI_API}",
-    }
-
-    json_data = {
-        "model": "text-davinci-003",
-        "prompt": pertanyaan,
-        "max_tokens": 200,
-        "temperature": 0,
-    }
-    msg = await m.reply("Wait a moment looking for your answer..")
-    try:
-        response = (await http.post("https://api.openai.com/v1/completions", headers=headers, json=json_data)).json()
-        await msg.edit(response["choices"][0]["text"])
-    except:
-        await msg.edit("Yahh, sorry i can't get your answer."
-
-
-
 
 __PLUGIN__ = "utils"
 _DISABLE_CMDS_ = ["ask", "paste", "imdb", "wiki", "id", "gifid", "tr", "github", "git"]
@@ -446,15 +420,16 @@ __alt_name__ = ["util", "misc", "tools"]
 __HELP__ = """
 **Utils**
 
-Some utils provided by bot to make your tasks easy!
+Beberapa alat disediakan oleh bot untuk membuat tugas Anda lebih mudah!
 
-• /id: Get the current group id. If used by replying to a message, get that user's id.
-• /info: Get information about a user.
-• /gifid: Reply to a gif to me to tell you its file ID.
-• /wiki: `<query>`: wiki your query.
-• /tr `<language>`: Translates the text and then replies to you with the language you have specifed, works as a reply to message.
-• /git `<username>`: Search for the user using github api!
-• /weebify `<text>` or `<reply to message>`: To weebify the text.
+• /id: Dapatkan id grup saat ini. Jika digunakan dengan membalas pesan, dapatkan id pengguna tersebut.
+• /info: Dapatkan informasi tentang pengguna.
+• /imdb '<imd id>': Cari detail drama/film menggunakan imdb api!
+• /gifid: Balas gif kepada saya untuk memberi tahu Anda ID file-nya.
+• /wiki: '<query>': wiki kueri Anda.
+• /tr '<language>': Terjemahkan teks dan kemudian balas kepada Anda dengan bahasa yang telah Anda tentukan, berfungsi sebagai balasan pesan.
+• /git '<username>': Cari pengguna menggunakan github api!
+• /weebify '' <text>atau '<balas pesan>': Untuk membuat teks.
 
 **Example:**
-`/git iamgojoof6eyes`: this fetches the information about a user from the database."""
+`/imdb tt1630029`: Ini mengambil informasi tentang film dari database."""
