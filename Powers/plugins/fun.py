@@ -38,10 +38,10 @@ async def fun_shout(_, m: Message):
         return
 
 @Gojo.on_message(command("ask"))
-async def apakah(event):
-    quew = event.pattern_match.group(1)
+async def apakah(_, m: Message):
+    quew = m.command_match.group(1)
     if not quew:
-        await event.reply('Berikan saya pertanyaan 😐')
+        await m.reply('Berikan saya pertanyaan 😐')
         return
     await m.reply_text(choice(extras.APAKAH))
 
