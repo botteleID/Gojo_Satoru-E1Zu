@@ -412,9 +412,35 @@ async def tr(_, message):
         f"<b>Translated:</b> from {detectlang} to {target_lang} \n<code>``{tekstr.text}``</code>",
     )
 
+@Gojo.on_message(filters.command("ask", COMMAND_HANDLER))
+
+async def chatbot(c, m):
+    if len(m.command) == 1:
+        return await m.reply(f"Gunakan perintah <code>/{m.command[0]} [pertanyaan]</code> untuk menanyakan pertanyaan menggunakan AI.")
+    pertanyaan = m.text.split(" ", maxsplit=1)[1]
+    headers = {
+        "Content-Type": "application/json",
+        "Authorization": f"Bearer {OPENAI_API}",
+    }
+
+    json_data = {
+        "model": "text-davinci-003",
+        "prompt": pertanyaan,
+        "max_tokens": 200,
+        "temperature": 0,
+    }
+    msg = await m.reply("Wait a moment looking for your answer..")
+    try:
+        response = (await http.post("https://api.openai.com/v1/completions", headers=headers, json=json_data)).json()
+        await msg.edit(response["choices"][0]["text"])
+    except:
+        await msg.edit("Yahh, sorry i can't get your answer."
+
+
+
 
 __PLUGIN__ = "utils"
-_DISABLE_CMDS_ = ["paste", "imdb", "wiki", "id", "gifid", "tr", "github", "git"]
+_DISABLE_CMDS_ = ["ask", paste", "imdb", "wiki", "id", "gifid", "tr", "github", "git"]
 __alt_name__ = ["util", "misc", "tools"]
 
 __HELP__ = """
