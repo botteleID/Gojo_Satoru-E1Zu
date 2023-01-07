@@ -362,9 +362,10 @@ async def member_has_left(c: Gojo, member: ChatMemberUpdated):
             except RPCError:
                 pass
         if user.id in DEV_USERS:
-            await c.send_message(
-                member.chat.id,
-                "Will miss you master :(",
+            await c.send_animation(
+                chat_id=member.chat.id,
+                animation="./extras/goodbye.gif",
+                caption="Will miss you **DEV** :(",
             )
             return
         try:
