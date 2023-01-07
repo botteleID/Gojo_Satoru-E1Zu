@@ -40,7 +40,7 @@ async def fun_shout(_, m: Message):
 
 
 
-@Gojo.bot.message_handler(func=check_function)
+@Gojo.message_handler(func=check_function)
 
 async def check_function(_, m: Message):
     if len(m.text.lower()) == "hello":
