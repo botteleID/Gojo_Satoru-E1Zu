@@ -34,7 +34,7 @@ today = str(dt()[0])
 tomorrow = str(dt_tom())
 
 
-@Gojo.on_message(filters.command("copel") & ~filters.edited)
+@Gojo.on_message(filters.command("copel"))
 @capture_err
 async def couple(_, message):
     if message.chat.type == "private":
