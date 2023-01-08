@@ -218,7 +218,7 @@ async def shiping(_, m: Message):
         
 
     if avtar:
-        return await m.send_animation(animation=f"{avtar}", caption=REPLY)
+        return await m.reply_animation(animation=f"{avtar}", caption=REPLY)
     await m.reply_text(REPLY)
     return
 
