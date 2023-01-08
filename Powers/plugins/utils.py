@@ -185,10 +185,10 @@ async def get_gifid(_, m: Message):
 @Gojo.on_message(
    command(["ship"]) & (filters.group | filters.private),
 )
-async def ship(_, m: Message):
+async def shiping(_, m: Message):
     if len(m.text.split()) == 2:
         username = m.text.split(maxsplit=1)[1]
-        LOGGER.info(f"{m.from_user.id} used imdb cmd in {m.chat.id}")
+        LOGGER.info(f"{m.from_user.id} used shiping cmd in {m.chat.id}")
     else:
         await m.reply_text(
             f"Usage: <code>{Config.PREFIX_HANDLER}id imdb</code>",
@@ -206,16 +206,9 @@ async def ship(_, m: Message):
     avtar = r.get("Poster", None)
     rntime = r.get("Runtime", None)
     name = r.get("Title", None)
-    company = r.get("company", None)
-    rlis = r.get("Released", 0)
+    
     public_repos = r.get("imdbRating", 0)
     bio = r.get("Plot", None)
-    negara = r.get("Country", "Not Found")
-    location = r.get("location", None)
-    email = r.get("email", None)
-    
-    blog = r.get("blog", None)
-    twitter = r.get("twitter_username", None)
     
 
     REPLY = ""
@@ -225,13 +218,7 @@ async def ship(_, m: Message):
         REPLY += f"\n<b>Durasi:</b> {rntime}"
     REPLY += f"\n<b>Peringkat:</b> {public_repos}"
     
-    if email:
-        REPLY += f"\n<b>✉️ Email:</b> <code>{email}</code>"
-    if company:
-        org_url = company.strip("@")
-        REPLY += f"\n<b>™️ Organization:</b> <a href='https://github.com/{org_url}'>{company}</a>"
-    i
-    
+ 
     if bio:
         REPLY += f"\n\n<b>📜 Plot:</b> <code>{bio}</code>"
 
