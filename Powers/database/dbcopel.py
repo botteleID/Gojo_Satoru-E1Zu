@@ -13,7 +13,7 @@ from Powers.database import MongoDB
 
 
 
-    coupledb = "chats"
+    coupledb = chats
 
 
 
