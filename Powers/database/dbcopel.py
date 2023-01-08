@@ -11,7 +11,14 @@ from Powers.database import MongoDB
 # AND NEEDS TO BE REWRITTEN, BUT I WON'T, AS IT WILL TAKE
 # TOO MUCH TIME AND WILL BE BAD FOR ALREADY STORED DATA
 
-coupledb = MongoDB.couple
+
+class Chats(MongoDB):
+    """Class to manage users for bot."""
+
+    # Database name to connect to to preform operations
+    coupledb = "chats"
+
+
 
 def obj_to_str(obj):
     if not obj:
