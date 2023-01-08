@@ -213,14 +213,9 @@ async def shiping(_, m: Message):
 
     REPLY = ""
     if idsa:
-        REPLY += f"<b>📹 Judul:</b> {idsa}"
-    if usersa:
-        REPLY += f"\n<b>Durasi:</b> {usersa}"
-    REPLY += f"\n<b>Peringkat:</b> {userdu}"
-    
- 
-    if iddu:
-        REPLY += f"\n\n<b>📜 Plot:</b> <code>{iddu}</code>"
+        REPLY += f"<b>Pasangan hari ini:</b>\n\n<a href='tg://openmessage?user_id={idsa}'>{usersa}</a>"
+    REPLY += f"+ <a href='tg://openmessage?user_id={iddu}'>{userdu}</a> = ❤️\n\nPasangan baru hari ini dapat dipilih pada pukul 05.00 WIB"
+        
 
     if avtar:
         return await m.reply_photo(photo=f"{avtar}", caption=REPLY)
