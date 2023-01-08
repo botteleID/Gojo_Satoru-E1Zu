@@ -213,8 +213,8 @@ async def shiping(_, m: Message):
 
     REPLY = ""
     if idsa:
-        REPLY += f"<b>Pasangan hari ini:</b>\n<a href='tg://openmessage?user_id={idsa}'>{usersa}</a>"
-    REPLY += f"+ <a href='tg://openmessage?user_id={iddu}'>{userdu}</a> = ❤️\n\nPasangan baru hari ini dapat dipilih pada pukul 05.00 WIB"
+        REPLY += f"Pasangan hari ini:\n<a href='tg://openmessage?user_id={idsa}'>{usersa}</a>"
+    REPLY += f" + <a href='tg://openmessage?user_id={iddu}'>{userdu}</a> = ❤️\n\nPasangan baru hari ini dapat dipilih pada hari pukul 05.00 WIB"
         
 
     if avtar:
