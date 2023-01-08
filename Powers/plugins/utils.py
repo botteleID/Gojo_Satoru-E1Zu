@@ -195,7 +195,7 @@ async def shiping(_, m: Message):
         )
         return
     username = username.split("/")[-1]
-    URL = f"https://www.omdbapi.com/?apikey=95cc8ace&i={username}"
+    URL = f"https://tebakgambar.akurak.repl.co/love/{username}.json"
     try:
         r = await get(URL, timeout=5)
     except asyncio.TimeoutError:
@@ -203,30 +203,29 @@ async def shiping(_, m: Message):
     except Exception as e:
         return await m.reply_text(f"ERROR: `{e}`")
 
-    avtar = r.get("Poster", None)
-    rntime = r.get("Runtime", None)
-    name = r.get("Title", None)
+    avtar = r.get("gif", None)
+    usersa = r.get("usersatu", None)
+    idsa = r.get("idsatu", None)
     
-    public_repos = r.get("imdbRating", 0)
-    bio = r.get("Plot", None)
+    userdu = r.get("userdua", None)
+    iddu = r.get("iddua", None)
     
 
     REPLY = ""
-    if name:
-        REPLY += f"<b>📹 Judul:</b> {name}"
+    if idsa:
+        REPLY += f"<b>📹 Judul:</b> {idsa}"
     if rntime:
-        REPLY += f"\n<b>Durasi:</b> {rntime}"
-    REPLY += f"\n<b>Peringkat:</b> {public_repos}"
+        REPLY += f"\n<b>Durasi:</b> {usersa}"
+    REPLY += f"\n<b>Peringkat:</b> {userdu}"
     
  
-    if bio:
-        REPLY += f"\n\n<b>📜 Plot:</b> <code>{bio}</code>"
+    if iddu:
+        REPLY += f"\n\n<b>📜 Plot:</b> <code>{iddu}</code>"
 
     if avtar:
         return await m.reply_photo(photo=f"{avtar}", caption=REPLY)
     await m.reply_text(REPLY)
     return
-
 
 
 @Gojo.on_message(
