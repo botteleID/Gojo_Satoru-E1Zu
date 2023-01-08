@@ -40,7 +40,10 @@ async def fun_shout(_, m: Message):
         return
 
 
-
+@Gojo.on_message(command("pagi"))
+async def pagihari(_, m: Message):
+    await m.reply_text(choice(extras.PAGI))
+        return
 
 
 
