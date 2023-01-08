@@ -182,7 +182,42 @@ async def get_gifid(_, m: Message):
     return
 
 
+@Gojo.on_message(
+    command(["ship"]) & (filters.group | filters.private),
+)
+async def shiping(_, m: Message):
+    if len(m.text.split()) == 2:
+        username = m.text.split(maxsplit=1)[1]
+        LOGGER.info(f"{m.from_user.id} used ship cmd in {m.chat.id}")
+    else:
+        await m.reply_text(
+            f"Usage: <code>{Config.PREFIX_HANDLER}github username</code>",
+        )
+        return
+    username = username.split("/")[-1]
+    URL = f"https://api.github.com/users/{username}"
+    try:
+        r = await get(URL, timeout=5)
+    except asyncio.TimeoutError:
+        return await m.reply_text("request timeout")
+    except Exception as e:
+        return await m.reply_text(f"ERROR: `{e}`")
+avtar = r.get("avatar_url", None)
+    url = r.get("html_url", None)
+    name = r.get("name", None)
 
+
+REPLY = ""
+    if name:
+        REPLY += f"<b>🧑‍💻 GitHub Info of {name}:</b>"
+    if url:
+        REPLY += f"\n<b>📎 URL:</b> <a href='{url}'>{username}</a>"
+    
+    
+    if avtar:
+        return await m.reply_photo(photo=f"{avtar}", caption=REPLY)
+    await m.reply_text(REPLY)
+    return
 
 @Gojo.on_message(
     command(["github", "git"]) & (filters.group | filters.private),
