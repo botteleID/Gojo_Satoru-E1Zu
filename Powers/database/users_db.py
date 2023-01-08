@@ -40,15 +40,7 @@ class Users(MongoDB):
         with INSERTION_LOCK:
             return self.user_info
    
- def _get_lovers(chat_id: int):
-    lovers = coupledb.find_one({"chat_id": chat_id})
-    if not lovers:
-        return {}
-    return lovers["couple"]
-
-
-
-
+ 
 def get_couple(chat_id: int, date: str):
     lovers = await _get_lovers(chat_id)
     if date in lovers:
