@@ -214,7 +214,7 @@ async def shiping(_, m: Message):
     REPLY = ""
     if idsa:
         REPLY += f"<b>📹 Judul:</b> {idsa}"
-    if rntime:
+    if usersa:
         REPLY += f"\n<b>Durasi:</b> {usersa}"
     REPLY += f"\n<b>Peringkat:</b> {userdu}"
     
