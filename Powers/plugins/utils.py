@@ -185,7 +185,7 @@ async def get_gifid(_, m: Message):
 @Gojo.on_message(
    command(["ship"]) & (filters.group | filters.private),
 )
-async def imdb(_, m: Message):
+async def ship(_, m: Message):
     if len(m.text.split()) == 2:
         username = m.text.split(maxsplit=1)[1]
         LOGGER.info(f"{m.from_user.id} used imdb cmd in {m.chat.id}")
