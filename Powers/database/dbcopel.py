@@ -11,7 +11,7 @@ from Powers.database import MongoDB
 # AND NEEDS TO BE REWRITTEN, BUT I WON'T, AS IT WILL TAKE
 # TOO MUCH TIME AND WILL BE BAD FOR ALREADY STORED DATA
 
-coupledb = db.couple
+coupledb = MongoDB.couple
 
 def obj_to_str(obj):
     if not obj:
