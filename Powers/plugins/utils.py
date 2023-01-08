@@ -194,7 +194,6 @@ async def shiping(_, m: Message):
             f"😅 Maaf, perintah ini hanya untuk owner.",
         )
         return
-
     username = username.split("/")[-1]
     URL = f"https://tebakgambar.akurak.repl.co/love/{username}.json"
     try:
@@ -290,7 +289,7 @@ async def imdb(_, m: Message):
     REPLY += f"\n<b>Negara:</b> <code>{negara}</code>"
     REPLY += f"\n<b>Bahasa:</b> <code>{bhsa}</code>"
     REPLY += f"\n\n<b>🙎 Info Cast:\nSutradara:</b> <code>{strdara}</code>"
-    pnlisku = pnlis.split(maxsplit=1)[1]
+    pnlisku = pnlis.split(",")[1]
     REPLY += f"\n<b>Penulis:</b> <code>{pnlisku}</code>"
     REPLY += f"\n<b>Pemeran:</b> <code>{artis}</code>"
     if bio:
