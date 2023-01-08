@@ -297,11 +297,10 @@ async def imdb(_, m: Message):
     if name:
         REPLY += f"<b>📹 Judul:</b> {name} ({tipe})"
     if rntime:
-        gnreku = "#".join(gnre)
         REPLY += f"\n<b>Durasi:</b> {rntime}"
     REPLY += f"\n<b>Rating:</b> {public_repos} dari {voter} pengguna"
     REPLY += f"\n<b>Rilis:</b> {rlis}"
-    REPLY += f"\n<b>Genre:</b> {gnreku}"
+    REPLY += f"\n<b>Genre:</b> {gnre}"
     if email:
         REPLY += f"\n<b>✉️ Email:</b> <code>{email}</code>"
     if company:
@@ -318,8 +317,7 @@ async def imdb(_, m: Message):
     REPLY += f"\n<b>Negara:</b> <code>{negara}</code>"
     REPLY += f"\n<b>Bahasa:</b> <code>{bhsa}</code>"
     REPLY += f"\n\n<b>🙎 Info Cast:\nSutradara:</b> <code>{strdara}</code>"
-    pnlisku = pnlis.rstrip(",")
-    REPLY += f"\n<b>Penulis:</b> <code>{pnlisku}</code>"
+    REPLY += f"\n<b>Penulis:</b> <code>{pnlis}</code>"
     REPLY += f"\n<b>Pemeran:</b> <code>{artis}</code>"
     if bio:
         REPLY += f"\n\n<b>📜 Plot:</b> <code>{bio}</code>"
