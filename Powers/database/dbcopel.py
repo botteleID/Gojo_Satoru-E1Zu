@@ -12,10 +12,7 @@ from Powers.database import MongoDB
 # TOO MUCH TIME AND WILL BE BAD FOR ALREADY STORED DATA
 
 
-class Chats(MongoDB):
-    """Class to manage users for bot."""
 
-    # Database name to connect to to preform operations
     coupledb = "chats"
 
 
