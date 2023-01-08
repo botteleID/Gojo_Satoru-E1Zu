@@ -191,7 +191,7 @@ async def shiping(_, m: Message):
         LOGGER.info(f"{m.from_user.id} used shiping cmd in {m.chat.id}")
     else:
         await m.reply_text(
-            f"Usage: <code>{Config.PREFIX_HANDLER}id imdb</code>",
+            f"😅 Maaf, perintah ini hanya untuk owner.",
         )
         return
     username = username.split("/")[-1]
@@ -213,12 +213,12 @@ async def shiping(_, m: Message):
 
     REPLY = ""
     if idsa:
-        REPLY += f"<b>Pasangan hari ini:</b>\n\n<a href='tg://openmessage?user_id={idsa}'>{usersa}</a>"
+        REPLY += f"<b>Pasangan hari ini:</b>\n<a href='tg://openmessage?user_id={idsa}'>{usersa}</a>"
     REPLY += f"+ <a href='tg://openmessage?user_id={iddu}'>{userdu}</a> = ❤️\n\nPasangan baru hari ini dapat dipilih pada pukul 05.00 WIB"
         
 
     if avtar:
-        return await m.reply_photo(photo=f"{avtar}", caption=REPLY)
+        return await m.send_animation(animation=f"{avtar}", caption=REPLY)
     await m.reply_text(REPLY)
     return
 
