@@ -183,56 +183,19 @@ async def get_gifid(_, m: Message):
 
 
 @Gojo.on_message(
-    command(["ship"]) & (filters.group | filters.private),
+   command(["ship"]) & (filters.group | filters.private),
 )
-async def shiping(_, m: Message):
+async def imdb(_, m: Message):
     if len(m.text.split()) == 2:
         username = m.text.split(maxsplit=1)[1]
-        LOGGER.info(f"{m.from_user.id} used ship cmd in {m.chat.id}")
+        LOGGER.info(f"{m.from_user.id} used imdb cmd in {m.chat.id}")
     else:
         await m.reply_text(
-            f"Usage: <code>{Config.PREFIX_HANDLER}github username</code>",
+            f"Usage: <code>{Config.PREFIX_HANDLER}id imdb</code>",
         )
         return
     username = username.split("/")[-1]
-    URL = f"https://api.github.com/users/{username}"
-    try:
-        r = await get(URL, timeout=5)
-    except asyncio.TimeoutError:
-        return await m.reply_text("request timeout")
-    except Exception as e:
-        return await m.reply_text(f"ERROR: `{e}`")
-avtar = r.get("avatar_url", None)
-    url = r.get("html_url", None)
-    name = r.get("name", None)
-
-
-REPLY = ""
-    if name:
-        REPLY += f"<b>🧑‍💻 GitHub Info of {name}:</b>"
-        REPLY += f"\n<b>🔑 Public Repos:</b> {url}"
-        
-    
-    
-    if avtar:
-        return await m.reply_photo(photo=f"{avtar}", caption=REPLY)
-    await m.reply_text(REPLY)
-    return
-
-@Gojo.on_message(
-    command(["github", "git"]) & (filters.group | filters.private),
-)
-async def github(_, m: Message):
-    if len(m.text.split()) == 2:
-        username = m.text.split(maxsplit=1)[1]
-        LOGGER.info(f"{m.from_user.id} used github cmd in {m.chat.id}")
-    else:
-        await m.reply_text(
-            f"Usage: <code>{Config.PREFIX_HANDLER}github username</code>",
-        )
-        return
-    username = username.split("/")[-1]
-    URL = f"https://api.github.com/users/{username}"
+    URL = f"https://www.omdbapi.com/?apikey=95cc8ace&i={username}"
     try:
         r = await get(URL, timeout=5)
     except asyncio.TimeoutError:
@@ -240,51 +203,44 @@ async def github(_, m: Message):
     except Exception as e:
         return await m.reply_text(f"ERROR: `{e}`")
 
-    avtar = r.get("avatar_url", None)
-    url = r.get("html_url", None)
-    name = r.get("name", None)
+    avtar = r.get("Poster", None)
+    rntime = r.get("Runtime", None)
+    name = r.get("Title", None)
     company = r.get("company", None)
-    followers = r.get("followers", 0)
-    following = r.get("following", 0)
-    public_repos = r.get("public_repos", 0)
-    bio = r.get("bio", None)
-    created_at = r.get("created_at", "Not Found")
+    rlis = r.get("Released", 0)
+    public_repos = r.get("imdbRating", 0)
+    bio = r.get("Plot", None)
+    negara = r.get("Country", "Not Found")
     location = r.get("location", None)
     email = r.get("email", None)
-    updated_at = r.get("updated_at", "Not Found")
+    
     blog = r.get("blog", None)
     twitter = r.get("twitter_username", None)
+    
 
     REPLY = ""
     if name:
-        REPLY += f"<b>🧑‍💻 GitHub Info of {name}:</b>"
-    if url:
-        REPLY += f"\n<b>📎 URL:</b> <a href='{url}'>{username}</a>"
-    REPLY += f"\n<b>🔑 Public Repos:</b> {public_repos}"
-    REPLY += f"\n<b>🧲 Followers:</b> {followers}"
-    REPLY += f"\n<b>✨ Following:</b> {following}"
+        REPLY += f"<b>📹 Judul:</b> {name}"
+    if rntime:
+        REPLY += f"\n<b>Durasi:</b> {rntime}"
+    REPLY += f"\n<b>Peringkat:</b> {public_repos}"
+    
     if email:
         REPLY += f"\n<b>✉️ Email:</b> <code>{email}</code>"
     if company:
         org_url = company.strip("@")
         REPLY += f"\n<b>™️ Organization:</b> <a href='https://github.com/{org_url}'>{company}</a>"
-    if blog:
-        bname = blog.split(".")[-2]
-        bname = bname.split("/")[-1]
-        REPLY += f"\n<b>📝 Blog:</b> <a href={blog}>{bname}</a>"
-    if twitter:
-        REPLY += f"\n<b>⚜️ Twitter:</b> <a href='https://twitter.com/{twitter}'>{twitter}</a>"
-    if location:
-        REPLY += f"\n<b>🚀 Location:</b> <code>{location}</code>"
-    REPLY += f"\n<b>💫 Created at:</b> <code>{created_at}</code>"
-    REPLY += f"\n<b>⌚️ Updated at:</b> <code>{updated_at}</code>"
+    i
+    
     if bio:
-        REPLY += f"\n\n<b>🎯 Bio:</b> <code>{bio}</code>"
+        REPLY += f"\n\n<b>📜 Plot:</b> <code>{bio}</code>"
 
     if avtar:
         return await m.reply_photo(photo=f"{avtar}", caption=REPLY)
     await m.reply_text(REPLY)
     return
+
+
 
 @Gojo.on_message(
    command(["imdb"]) & (filters.group | filters.private),
@@ -449,7 +405,7 @@ async def tr(_, message):
 
 
 __PLUGIN__ = "utils"
-_DISABLE_CMDS_ = ["ask", "paste", "imdb", "wiki", "id", "gifid", "tr", "github", "git"]
+_DISABLE_CMDS_ = ["ask", "ship", "paste", "imdb", "wiki", "id", "gifid", "tr", "github", "git"]
 __alt_name__ = ["util", "misc", "tools"]
 
 __HELP__ = """
