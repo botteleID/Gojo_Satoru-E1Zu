@@ -210,8 +210,8 @@ avtar = r.get("avatar_url", None)
 REPLY = ""
     if name:
         REPLY += f"<b>🧑‍💻 GitHub Info of {name}:</b>"
-    if url:
-        REPLY += f"\n<b>📎 URL:</b> <a href='{url}'>{username}</a>"
+        REPLY += f"\n<b>🔑 Public Repos:</b> {url}"
+        
     
     
     if avtar:
