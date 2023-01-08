@@ -39,7 +39,8 @@ class Users(MongoDB):
     def get_my_info(self):
         with INSERTION_LOCK:
             return self.user_info
-     async def _get_lovers(chat_id: int):
+   
+ def _get_lovers(chat_id: int):
     lovers = coupledb.find_one({"chat_id": chat_id})
     if not lovers:
         return {}
