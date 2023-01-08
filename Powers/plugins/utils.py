@@ -203,7 +203,7 @@ async def shiping(_, m: Message):
     except Exception as e:
         return await m.reply_text(f"ERROR: `{e}`")
 
-    avtar = r.get("gif", None)
+    avtar = r.get("lovegif", None)
     usersa = r.get("usersatu", None)
     idsa = r.get("idsatu", None)
     
