@@ -53,8 +53,8 @@ async def apakah(_, m: Message):
 
 @Gojo.on_message(command("pagi"))
 async def pagi_hari(_, m: Message):
-    reply_text = m.reply_to_message.reply_text if m.reply_to_message else m.reply_text
-    await reply_text(choice(extras.PAGI))
+    
+    await m.reply_text(choice(extras.PAGI))
     LOGGER.info(f"{m.from_user.id} pagi digunakan di {m.chat.id}")
     return 
 
