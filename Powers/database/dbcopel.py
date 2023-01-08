@@ -13,8 +13,7 @@ from Powers.database import MongoDB
 
 
 
-    coupledb = chats
-
+    
 
 
 def obj_to_str(obj):
