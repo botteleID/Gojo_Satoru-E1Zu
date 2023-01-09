@@ -40,16 +40,6 @@ async def fun_shout(_, m: Message):
         return
 
 
-@Gojo.on_message(filters.text & filters.group & ~filters.bot, group=69)
-async def send_text(_, m: Message):
-    if len(m.text.lower()) == "hello":
-        await m.reply_text(text="ini hello")        
-       
-    elif len(m.text.lower()) == "bye":
-        await m.reply_text(text="ini good bye") 
-        return
-
-
 
 @Gojo.on_message(command("j"))
 async def apakah(_, m: Message):
