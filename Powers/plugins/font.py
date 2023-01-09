@@ -68,7 +68,7 @@ async def fontdu(_, m: Message):
     normiefont = "a b c d e f g h i j k l m n o p q r s t u v w x y z".split()
     weebyfont = "𝖆 𝖇 𝖈 𝖉 𝖊 𝖋 𝖌 𝖍 𝖎 𝖏 𝖐 𝖑 𝖒 𝖓 𝖔 𝖕 𝖖 𝖗 𝖘 𝖙 𝖚 𝖛 𝖜 𝖝 𝖞 𝖟".split()
 
-    string = "  ".join(args).lower()
+    string = "".join(args).lower()
     for normiecharacter in string:
         if normiecharacter in normiefont:
             weebycharacter = weebyfont[normiefont.index(normiecharacter)]
