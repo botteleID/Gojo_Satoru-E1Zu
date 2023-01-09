@@ -263,11 +263,13 @@ async def imdb(_, m: Message):
     artis = r.get("Actors", "Not Found")
     tipe = r.get("Type", "Not Found")
     voter = r.get("imdbVotes", "Not Found")
+    prstsi = r.get("Awards", "Not Found")
 
 
     REPLY = ""
     if name:
-        REPLY += f"<b>📹 Judul:</b> {name} ({tipe})"
+       typku = tipe.capitalize()
+        REPLY += f"<b>📹 Detail {typku}:\nJudul:</b> {name} ({tipe})"
     if rntime:
         REPLY += f"\n<b>Durasi:</b> {rntime}"
     REPLY += f"\n<b>Rating:</b> {public_repos} dari {voter} pengguna"
@@ -294,6 +296,7 @@ async def imdb(_, m: Message):
     REPLY += f"\n<b>Pemeran:</b> <code>{artis}</code>"
     if bio:
         REPLY += f"\n\n<b>📜 Plot:</b> <code>{bio}</code>"
+        REPLY += f"\n\n<b>🏆 Penghargaan:</b> <code>{prstsi}</code>"
 
     if avtar:
         return await m.reply_photo(photo=f"{avtar}", caption=REPLY)
