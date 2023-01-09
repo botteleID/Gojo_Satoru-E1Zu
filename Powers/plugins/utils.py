@@ -268,8 +268,7 @@ async def imdb(_, m: Message):
 
     REPLY = ""
     if name:
-       typku = tipe.capitalize()
-        REPLY += f"<b>📹 Detail {typku}:\nJudul:</b> {name} ({tipe})"
+       REPLY += f"<b>📹 Detail:\nJudul:</b> {name} ({tipe})"
     if rntime:
         REPLY += f"\n<b>Durasi:</b> {rntime}"
     REPLY += f"\n<b>Rating:</b> {public_repos} dari {voter} pengguna"
