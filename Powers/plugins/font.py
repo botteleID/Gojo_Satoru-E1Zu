@@ -364,4 +364,5 @@ __HELP__ = """
 • /font7 '<reply text>'
 • /font8 '<reply text>'
 • /font9 '<reply text>'
-• /font10 '<reply text>'"""
+• /font10 '<reply text>'
+"""
