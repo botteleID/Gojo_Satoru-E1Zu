@@ -11,9 +11,6 @@ from Powers import DEV_USERS, LOGGER
 from Powers.bot_class import Gojo
 from Powers.utils import extras
 from Powers.utils.custom_filters import command
-
-
-
    
 @Gojo.on_message(command("font1"))
 async def fontsat(_, m: Message):
@@ -343,7 +340,17 @@ __PLUGIN__ = "font"
 _DISABLE_CMDS_ = [
     "font1",
     "font2",
+    "font3",
+    "font4",
+    "font5",
+    "font6",
+    "font7",
+    "font8",
+    "font9",
+    "font10",
 ]
+
+
 
 __HELP__ = """
 **Font Generator**
