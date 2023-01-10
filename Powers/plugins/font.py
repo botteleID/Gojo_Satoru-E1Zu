@@ -32,7 +32,7 @@ async def fontsat(_, m: Message):
     normiefont = "a b c d e f g h i j k l m n o p q r s t u v w x y z".split()
     weebyfont = "卂 乃 匚 刀 乇 下 厶 卄 工 丁 长 乚 从 𠘨 口 尸 㔿 尺 丂 丅 凵 リ 山 乂 丫 乙".split()
 
-    string = "".join(args).lower()
+    string = args.lower()
     for normiecharacter in string:
         if normiecharacter in normiefont:
             weebycharacter = weebyfont[normiefont.index(normiecharacter)]
@@ -64,7 +64,7 @@ async def fontdu(_, m: Message):
     normiefont = "a b c d e f g h i j k l m n o p q r s t u v w x y z".split()
     weebyfont = "𝖆 𝖇 𝖈 𝖉 𝖊 𝖋 𝖌 𝖍 𝖎 𝖏 𝖐 𝖑 𝖒 𝖓 𝖔 𝖕 𝖖 𝖗 𝖘 𝖙 𝖚 𝖛 𝖜 𝖝 𝖞 𝖟".split()
 
-    string = "".join(args).lower()
+    string = args.lower()
     for normiecharacter in string:
         if normiecharacter in normiefont:
             weebycharacter = weebyfont[normiefont.index(normiecharacter)]
@@ -96,7 +96,7 @@ async def fontti(_, m: Message):
     normiefont = "a b c d e f g h i j k l m n o p q r s t u v w x y z".split()
     weebyfont = "ѧ ɞ ċ Ԁ є ғ ɢ һ ı j ҡ ʟ ṃ ṅ ȏ ƿ զ я ṡ ṭ ȗ ṿ ẇ × ʏ ẓ".split()
 
-    string = "".join(args).lower()
+    string = args.lower()
     for normiecharacter in string:
         if normiecharacter in normiefont:
             weebycharacter = weebyfont[normiefont.index(normiecharacter)]
@@ -129,7 +129,7 @@ async def fontem(_, m: Message):
     normiefont = "a b c d e f g h i j k l m n o p q r s t u v w x y z".split()
     weebyfont = "𝚊 𝚋 𝚌 𝚍 𝚎 𝚏 𝚐 𝚑 𝚒 𝚓 𝚔 𝚕 𝚖 𝚗 𝚘 𝚙 𝚚 𝚛 𝚜 𝚝 𝚞 𝚟 𝚠 𝚡 𝚢 𝚣".split()
 
-    string = "".join(args).lower()
+    string = args.lower()
     for normiecharacter in string:
         if normiecharacter in normiefont:
             weebycharacter = weebyfont[normiefont.index(normiecharacter)]
@@ -161,7 +161,7 @@ async def fontli(_, m: Message):
     normiefont = "a b c d e f g h i j k l m n o p q r s t u v w x y z".split()
     weebyfont = "𝕒 𝕓 𝕔 𝕕 𝕖 𝕗 𝕘 𝕙 𝕚 𝕛 𝕜 𝕝 𝕞 𝕟 𝕠 𝕡 𝕢 𝕣 𝕤 𝕥 𝕦 𝕧 𝕨 𝕩 𝕪 𝕫".split()
 
-    string = "".join(args).lower()
+    string = args.lower()
     for normiecharacter in string:
         if normiecharacter in normiefont:
             weebycharacter = weebyfont[normiefont.index(normiecharacter)]
@@ -193,7 +193,7 @@ async def fonten(_, m: Message):
     normiefont = "a b c d e f g h i j k l m n o p q r s t u v w x y z".split()
     weebyfont = "ค ๒ ς ๔ є Ŧ ﻮ ђ เ ן к ɭ ๓ ภ ๏ ק ợ г ร Շ ย ש ฬ א ץ չ".split()
 
-    string = "".join(args).lower()
+    string = args.lower()
     for normiecharacter in string:
         if normiecharacter in normiefont:
             weebycharacter = weebyfont[normiefont.index(normiecharacter)]
@@ -225,7 +225,7 @@ async def fonttu(_, m: Message):
     normiefont = "a b c d e f g h i j k l m n o p q r s t u v w x y z".split()
     weebyfont = "🅰 🅱 🅲 🅳 🅴 🅵 🅶 🅷 🅸 🅹 🅺 🅻 🅼 🅽 🅾 🅿 🆀 🆁 🆂 🆃 🆄 🆅 🆆 🆇 🆈 🆉".split()
 
-    string = "".join(args).lower()
+    string = args.lower()
     for normiecharacter in string:
         if normiecharacter in normiefont:
             weebycharacter = weebyfont[normiefont.index(normiecharacter)]
@@ -257,7 +257,7 @@ async def fontde(_, m: Message):
     normiefont = "a b c d e f g h i j k l m n o p q r s t u v w x y z".split()
     weebyfont = "𝗮 𝗯 𝗰 𝗱 𝗲 𝗳 𝗴 𝗵 𝗶 𝗷 𝗸 𝗹 𝗺 𝗻 𝗼 𝗽 𝗾 𝗿 𝘀 𝘁 𝘂 𝘃 𝘄 𝘅 𝘆 𝘇".split()
 
-    string = "".join(args).lower()
+    string = args.lower()
     for normiecharacter in string:
         if normiecharacter in normiefont:
             weebycharacter = weebyfont[normiefont.index(normiecharacter)]
@@ -289,7 +289,7 @@ async def fontsem(_, m: Message):
     normiefont = "a b c d e f g h i j k l m n o p q r s t u v w x y z".split()
     weebyfont = "🇦​ 🇧​ 🇨​ 🇩​ 🇪​ 🇫​ 🇬​ 🇭​ 🇮​ 🇯​ 🇰​ 🇱​ 🇲​ 🇳​ 🇴​ 🇵​ 🇶​ 🇷​ 🇸​ 🇹​ 🇺​ 🇻​ 🇼​ 🇽​ 🇾​ 🇿​".split()
 
-    string = "".join(args).lower()
+    string = args.lower()
     for normiecharacter in string:
         if normiecharacter in normiefont:
             weebycharacter = weebyfont[normiefont.index(normiecharacter)]
@@ -321,7 +321,7 @@ async def fontsep(_, m: Message):
     normiefont = "a b c d e f g h i j k l m n o p q r s t u v w x y z".split()
     weebyfont = "ᵃ ᵇ ᶜ ᵈ ᵉ ᶠ ᵍ ʰ ᶦ ʲ ᵏ ˡ ᵐ ⁿ ᵒ ᵖ ᵠ ʳ ˢ ᵗ ᵘ ᵛ ʷ ˣ ʸ ᶻ".split()
 
-    string = "".join(args).lower()
+    string = args.lower()
     for normiecharacter in string:
         if normiecharacter in normiefont:
             weebycharacter = weebyfont[normiefont.index(normiecharacter)]
